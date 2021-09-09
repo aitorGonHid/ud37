@@ -1,0 +1,12 @@
+<div style="margin: 0 auto" *ngIf="personajes!=null; else espera">
+  <div class="container">
+    <div class="card" *ngFor="let p of personajes">
+      <img src="{{p.image}}">
+      <p><b>Nombre: </b>{{p.name}}</p>
+      <p><b>Estado: </b>{{p.status}}</p>
+      <p><b>Especie: </b>{{p.species}}</p>
+      <button>See more</button>
+    </div>
+  </div>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
